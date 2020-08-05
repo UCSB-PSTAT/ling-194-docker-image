@@ -14,8 +14,8 @@ RUN pip install mlconjug3 && \
     pip install -i https://test.pypi.org/simple/ karel-robot && \
     jupyter labextension install @jupyterlab/debugger && \
     jupyter labextension install jupyter-matplotlib && \
-    jupyter labextension install @jupyterlab/debugger && \
-    jupyter labextension update --all
+    jupyter labextension install @jupyterlab/debugger
+#    jupyter labextension update --all
 
 RUN conda install -c conda-forge spacy && \
     conda install -c conda-forge ipympl && \
