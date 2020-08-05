@@ -8,12 +8,12 @@ LABEL maintainer="Patrick Windmiller <sysadmin@pstat.ucsb.edu>"
 
 USER $NB_UID
 
-RUN pip install mlconjug3 && \
-    pip install nlpcube && \
-    pip install praat-parselmouth && \
+# RUN pip install mlconjug3 && \
+#    pip install nlpcube && \
+#    pip install praat-parselmouth && \
 #    pip install -i https://test.pypi.org/simple/ karel-robot && \
 #    jupyter labextension install @jupyterlab/debugger && \
-    jupyter labextension install jupyter-matplotlib && \
+RUN jupyter labextension install jupyter-matplotlib && \
     jupyter labextension update --all
 
 RUN conda install -c conda-forge spacy && \
