@@ -11,11 +11,10 @@ USER $NB_UID
 RUN pip install mlconjug3 && \
     pip install nlpcube && \
     pip install praat-parselmouth && \
-    pip install -i https://test.pypi.org/simple/ karel-robot && \
-    jupyter labextension install @jupyterlab/debugger && \
+#    pip install -i https://test.pypi.org/simple/ karel-robot && \
+#    jupyter labextension install @jupyterlab/debugger && \
     jupyter labextension install jupyter-matplotlib && \
-    jupyter labextension install @jupyterlab/debugger
-#    jupyter labextension update --all
+    jupyter labextension update --all
 
 RUN conda install -c conda-forge spacy && \
     conda install -c conda-forge ipympl && \
@@ -39,7 +38,7 @@ RUN python -m spacy download en_core_web_md
 # RUN rm /opt/conda/share/jupyter/lab/extensions/jupyter-matplotlib-0.4.*
 
 RUN pip install --upgrade jupyterlab && \
-    jupyter labextension update jupyterlab_bokeh && \
-    jupyter labextension update @jupyterlab/debugger && \
+#    jupyter labextension update jupyterlab_bokeh && \
+#    jupyter labextension update @jupyterlab/debugger && \
     jupyter labextension update @jupyter-widgets/jupyterlab-manager && \
     jupyter-lab build
